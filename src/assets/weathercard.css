@@ -1,0 +1,16 @@
+.weather-content-container {
+  height: 25vh;
+  width: 15vw;
+  font-size: 2vh;
+  contain: content;
+  text-align: center;
+  background-color: wheat;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.579);
+}
+.weather-content-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
