@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import weatherFetch from "./functions/api-query";
 
 function App() {
+
+  const [storedWeather, setStoredWeather] = useState()
+  const handleClick = async (e) => {
+    e.preventDefault();
+    const queryInput = document.getElementById("searchbar").value
+    await weatherFetch(queryInput).then((data) => {
+      setStoredWeather(data)
+    })
+  }
+
+  useEffect(() => {
+    if (storedWeather) {
+      console.log(storedWeather)
+    }
+  }, [storedWeather])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="search-bar">
+        <input id="searchbar" placeholder="Please enter a city or zip code.." />
+        <button onClick={e => handleClick(e)}>Submit</button>
+      </div>
+      <div className="weather-content-container">
+        weather content goes here
+      </div>
     </div>
   );
 }
