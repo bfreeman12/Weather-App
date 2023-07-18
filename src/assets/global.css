@@ -6,17 +6,14 @@
 html {
   overflow: hidden;
 }
+
 body {
-  height:100vh;
-margin: 0;
+  height: 100vh;
+  margin: 0;
   /* daytime */
-  /* background: linear-gradient(135deg, #4a90e2, #63c2ff); */
+  background: linear-gradient(135deg, #4a90e2, #63c2ff);
   /* nighttime */
-  background: linear-gradient(135deg, #434343, #000000);
-
-  /* foggy */
-  /* background: linear-gradient(135deg, #d1d1d1, #f0f0f0); */
-
+  /* background: linear-gradient(135deg, #434343, #000000); */
 }
 
 .page-content {
@@ -25,12 +22,12 @@ margin: 0;
   display: flex;
   justify-content: center;
 }
-.weather-sticky-notes{
-  display:flex;
+.weather-sticky-notes {
+  display: flex;
   justify-content: space-evenly;
-  width:100%;
+  width: 100%;
 }
-.no-data-message{
+.no-data-message {
   display: flex;
   justify-content: center;
   align-items: center;
