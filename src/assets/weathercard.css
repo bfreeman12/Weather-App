@@ -4,9 +4,10 @@
   font-size: 2vh;
   contain: content;
   text-align: center;
-  background-color: wheat;
+  background-color: rgba(55, 55, 55, 1);
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.579);
+  color:white;
 }
 .weather-content-body {
   display: flex;
